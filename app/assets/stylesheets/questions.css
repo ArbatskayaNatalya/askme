@@ -41,3 +41,11 @@
 .question-actions a {
   margin-left: 10px;
 }
+
+.questions-count {
+  background: #D9E6E5;
+  min-height: 40px;
+  padding: 5px 0px;
+}
+
+

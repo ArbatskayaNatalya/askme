@@ -19,6 +19,11 @@
   margin-top: 20px;
 }
 
+.buffer-both-small {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
 .buffer-both-large {
   margin-bottom: 40px;
   margin-top: 40px;
@@ -60,6 +65,7 @@
 .column-1-3 {
   float: left;
   width: 33.33%;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 960px) {
@@ -72,9 +78,10 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 500px) {
   .column-1-3 {
     float: none;
     width: auto;
+    text-align: left;
   }
 }

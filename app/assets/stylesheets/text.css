@@ -43,3 +43,16 @@ a {
 .text-center {
   text-align: center;
 }
+
+.title-statistic {
+  color: #005a55;
+  font-size: 14px;
+  padding: 3px;
+}
+
+.text-statistic {
+  color: #005a55;
+  font-size: 14px;
+  font-style: italic;
+  padding: 3px;
+}
