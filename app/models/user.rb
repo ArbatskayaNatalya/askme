@@ -4,19 +4,21 @@ class User < ApplicationRecord
 
   ITERATIONS = 20000
   DIGEST = OpenSSL::Digest::SHA256.new
+  USERNAME_REGEXP = /\A\w+\z/
+  USERNAME_MAX_LENGTH = 40
 
   attr_accessor :password
 
   has_many :questions
 
-  validates :email, presence: true, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
-  validates :username, presence: true, uniqueness: true
-  validates :username, format: { with: /\A\w+\z/ }, length: { maximum: 40 }
-  validates :password, presence: true, on: :create
-  validates :password, confirmation: true
-
   before_validation :downcase_username_and_email
   before_save :encrypt_password
+
+  validates :email, presence: true, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
+  validates :username, presence: true, uniqueness: true
+  validates :username, format: { with: USERNAME_REGEXP }, length: { maximum: USERNAME_MAX_LENGTH }
+  validates :password, presence: true, on: :create
+  validates :password, confirmation: true
 
   def self.authenticate(email, password)
     user = find_by(email: email&.downcase!)
