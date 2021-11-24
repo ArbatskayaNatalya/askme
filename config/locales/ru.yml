@@ -1,0 +1,19 @@
+ru:
+  users:
+    show:
+      questions_count:
+        one: "вопрос"
+        two: "вопроса"
+        many: "вопросов"
+      button_center: "Спроси меня"
+      button_small: "Задать вопрос"
+      question_label: "Ваш вопрос для"
+      all_questions: "Всего задано"
+      answered: "Отвечено"
+      unanswered: "Без ответа"
+    index:
+      all_users: "Наши пользователи"
+
+  layouts:
+    application:
+      title: "Хорошие вопросы"

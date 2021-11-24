@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
-  root 'users#index'
-  resources :users
-  resources :questions
+  scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
+    root 'users#index'
+    resources :users
+    resources :questions
 
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-
-  get 'show' => 'users#show'
-
+    get 'show' => 'users#show'
+  end
 end
