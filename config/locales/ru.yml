@@ -2,8 +2,9 @@ ru:
   users:
     show:
       questions_count:
+        zero: "вопросов"
         one: "вопрос"
-        two: "вопроса"
+        few: "вопроса"
         many: "вопросов"
       button_center: "Спроси меня"
       button_small: "Задать вопрос"

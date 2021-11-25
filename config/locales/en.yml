@@ -3,8 +3,7 @@ en:
     show:
       questions_count:
         one: "question"
-        two: "questions"
-        many: "questions"
+        other: "questions"
       button_center: "Ask me"
       button_small: "Ask a question"
       question_label: "Your question for"
