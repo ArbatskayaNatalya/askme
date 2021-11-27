@@ -1,4 +1,15 @@
 en:
+  activerecord:
+    attributes:
+      user:
+        name: "name"
+        username: "username"
+        email: "email"
+        password: "password"
+        avatar_url: "avatar_url"
+        background_color: "color of your profile"
+        password_confirmation: "password confirmation"
+
   users:
     show:
       questions_count:
@@ -12,6 +23,10 @@ en:
       unanswered: "Unanswered"
     index:
       all_users: "Our users"
+    edit:
+      title: "Edit profile"
+      change_password: "If you don't want to change your password, leave these fields empty!"
+      save: "Save"
 
   layouts:
     application:

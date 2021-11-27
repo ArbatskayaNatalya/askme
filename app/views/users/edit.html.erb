@@ -1,5 +1,5 @@
 <div class="container content-wrapper buffer-both">
-  <h1 class="title-medium">Править профиль</h1>
+  <h1 class="title-medium"><%= t(".title") %></h1>
 
   <div class="column-1-2">
     <%= form_for(@user) do |f| %>
@@ -18,17 +18,22 @@
       </div>
 
       <div class="form-field">
-        <%= f.label 'Ваше имя', class: 'form-label' %>
+        <%= f.label :name, class: 'form-label' %>
         <%= f.text_field :name, class: 'form-text-field' %>
       </div>
 
       <div class="form-field">
-        <%= f.label 'URL вашей аватарки', class: 'form-label' %>
+        <%= f.label :avatar_url, class: 'form-label' %>
         <%= f.text_field :avatar_url, class: 'form-text-field' %>
       </div>
 
+      <div class="form-field">
+        <%= f.label :background_color, class: 'form-label' %>
+        <%= f.color_field :background_color, class: 'form-color-field' %>
+      </div>
+
       <div class="buffer-top-large buffer-bottom">
-        Если не хотите менять пароль — оставьте эти поля пустыми!
+        <%= t(".change_password") %>
       </div>
 
       <div class="form-field">
@@ -42,7 +47,7 @@
       </div>
 
       <div class="form-action buffer-top">
-        <%= f.submit 'Сохранить', class: 'button button-dark button-small' %>
+        <%= f.submit t(".save"), class: 'button button-dark button-small' %>
       </div>
     <% end %>
   </div>

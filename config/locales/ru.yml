@@ -1,4 +1,14 @@
 ru:
+  activerecord:
+    attributes:
+      user:
+        name: "имя"
+        username: "логин"
+        email: "адрес электронной почты"
+        password: "пароль"
+        avatar_url: "аватар"
+        background_color: "цвет профиля"
+        password_confirmation: "подтверждение пароля"
   users:
     show:
       questions_count:
@@ -14,6 +24,10 @@ ru:
       unanswered: "Без ответа"
     index:
       all_users: "Наши пользователи"
+    edit:
+      title: "Править профиль"
+      change_password: "Если не хотите менять пароль — оставьте эти поля пустыми!"
+      save: "Сохранить"
 
   layouts:
     application:
