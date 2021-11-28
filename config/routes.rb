@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
     root 'users#index'
-    resources :users, except: [:destroy]
+    resources :users
     resources :sessions, only: [:new, :create, :destroy]
     resources :questions, except: [:show, :new, :index]
 
