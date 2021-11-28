@@ -18,6 +18,7 @@ class User < ApplicationRecord
   validates :password, presence: true, on: :create
   validates :password, confirmation: true
   validates :background_color, format: { with: COLOR_REGEX }
+  validates :avatar_url, url: { allow_blank: true }
 
   before_validation :downcase_username_and_email
   before_save :encrypt_password
