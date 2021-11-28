@@ -16,7 +16,6 @@ class QuestionsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /questions/1
   def update
     if @question.update(question_params)
       redirect_to user_path(@question.user), notice: 'Ваш вопрос сохранен'
@@ -25,7 +24,6 @@ class QuestionsController < ApplicationController
     end
   end
 
-  # DELETE /questions/1
   def destroy
     user = @question.user
     @question.destroy

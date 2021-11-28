@@ -46,8 +46,15 @@
         <%= f.password_field :password_confirmation, class: 'form-text-field' %>
       </div>
 
-      <div class="form-action buffer-top">
-        <%= f.submit t(".save"), class: 'button button-dark button-small' %>
+      <div class="container">
+
+        <div class="form-action buffer-top column-1-2-button">
+          <%= f.submit t(".save"), class: 'button button-dark button-small' %>
+        </div>
+
+        <div class="form-action buffer-top column-1-2-button">
+          <%= link_to 'Удалить аккаунт', @user, data: {method: :delete, confirm: "Вы уверены, что хотите удалить свой аккаунт?"}, class: 'button button-dark button-small' %>
+        </div>
       </div>
     <% end %>
   </div>
