@@ -29,7 +29,7 @@ class QuestionsController < ApplicationController
   def destroy
     user = @question.user
     @question.destroy
-    redirect_to user_path, notice: 'Вопрос удален'
+    redirect_to user_path(user), notice: 'Вопрос удален'
   end
 
   private
