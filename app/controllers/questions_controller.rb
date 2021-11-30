@@ -5,10 +5,9 @@ class QuestionsController < ApplicationController
   def edit
   end
 
-  # POST /questions
   def create
     @question = Question.new(question_params)
-    @question.author_id = current_user.id
+    @question.author = current_user
 
     if @question.save
       redirect_to user_path(@question.user), notice: 'Ваш вопрос задан'

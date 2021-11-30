@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    redirect_to root_url, alert: 'Вы уже залогинены' if current_user.present?
+    redirect_to root_path, alert: 'Вы уже залогинены' if current_user.present?
     @user = User.new(user_params)
 
     if @user.save
